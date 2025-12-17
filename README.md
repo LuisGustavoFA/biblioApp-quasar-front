@@ -2,6 +2,14 @@
 
 Frontend for the biblioApp project made using Quasar and Vue.js 
 
+---
+
+### Deployed with Render at 🔗 https://biblioapp-quasar-front.onrender.com
+
+---
+
+# Self Deploy
+
 ## Install the dependencies
 ```bash
 yarn
@@ -30,4 +38,5 @@ quasar build
 
 ### Customize the configuration
 See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
+
 
