@@ -47,7 +47,7 @@ export default {
 
   methods: {
     getClient() {
-      axios.get(`https://unr-sd-a3-terca.onrender.com/clientes/email/${userStore.user}`, {
+      axios.get(`https://biblioapp-express-api.onrender.com/clientes/email/${userStore.user}`, {
         headers: { Authorization: `Bearer ${userStore.jwt}` }
       })
       .then((res) => {

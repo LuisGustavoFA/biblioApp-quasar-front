@@ -37,7 +37,7 @@ export default {
 
   methods: {
     getAuthor() {
-      axios.get(`https://unr-sd-a3-terca.onrender.com/autores/${this.$route.params.id}`, {
+      axios.get(`https://biblioapp-express-api.onrender.com/autores/${this.$route.params.id}`, {
         headers: { Authorization: `Bearer ${userStore.jwt}` }
       })
       .then((res) => {
@@ -47,7 +47,7 @@ export default {
     },
 
     getBooks() {
-      axios.get(`https://unr-sd-a3-terca.onrender.com/livros/autor/${this.$route.params.id}`, {
+      axios.get(`https://biblioapp-express-api.onrender.com/livros/autor/${this.$route.params.id}`, {
         headers: { Authorization: `Bearer ${userStore.jwt}` }
       })
       .then((res) => {

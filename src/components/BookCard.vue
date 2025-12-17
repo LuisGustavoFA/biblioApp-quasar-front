@@ -161,7 +161,7 @@ import { getEmprestimoID, addEmprestimo } from 'src/services/borrowServices.js'
     onReturn() {
       this.confirmReturn()
       .then(()=> {
-        axios.delete(`https://unr-sd-a3-terca.onrender.com/emprestimos/${this.emprestimoID}`, {
+        axios.delete(`https://biblioapp-express-api.onrender.com/emprestimos/${this.emprestimoID}`, {
           headers: {
             Authorization: `Bearer ${userStore.jwt}`
           }
@@ -183,7 +183,7 @@ import { getEmprestimoID, addEmprestimo } from 'src/services/borrowServices.js'
     },
 
     getAuthor(id) {
-      axios.get(`https://unr-sd-a3-terca.onrender.com/autores/${id}`)
+      axios.get(`https://biblioapp-express-api.onrender.com/autores/${id}`)
         .then((response) => {
           this.authorName = response.data.NAME;
         })
@@ -193,7 +193,7 @@ import { getEmprestimoID, addEmprestimo } from 'src/services/borrowServices.js'
     },
 
     getEditor(id) {
-      axios.get(`https://unr-sd-a3-terca.onrender.com/editoras/${id}`)
+      axios.get(`https://biblioapp-express-api.onrender.com/editoras/${id}`)
         .then((response) => {
           this.editorName = response.data.NAME;
         })
@@ -204,10 +204,10 @@ import { getEmprestimoID, addEmprestimo } from 'src/services/borrowServices.js'
 
     async getCategorias(id) {
       let tempCategorias = [];
-      await axios.get(`https://unr-sd-a3-terca.onrender.com/livros/${id}/categorias`)
+      await axios.get(`https://biblioapp-express-api.onrender.com/livros/${id}/categorias`)
         .then(async (response) => {
           for (var i = 0; i < response.data.length; i++) {
-            await axios.get(`https://unr-sd-a3-terca.onrender.com/categorias/${response.data[i].CATEGORY_ID}`)
+            await axios.get(`https://biblioapp-express-api.onrender.com/categorias/${response.data[i].CATEGORY_ID}`)
               .then(async (response) => await tempCategorias.push(response.data.NAME))
               .catch((erro) => console.log(erro));
           }
