@@ -1,6 +1,6 @@
-# a3udw (a3udw)
+# bilbioApp-quasar-front
 
-Projeto de App para a A3 de Usabilidade e Desenvolvimento Web utilizando Vue.js e Quasar
+Frontend for the biblioApp project made using Quasar and Vue.js 
 
 ## Install the dependencies
 ```bash
@@ -30,3 +30,4 @@ quasar build
 
 ### Customize the configuration
 See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
+
