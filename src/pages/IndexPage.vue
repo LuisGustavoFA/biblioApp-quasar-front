@@ -50,7 +50,7 @@ export default defineComponent({
 
   methods: {
     getBooks() {
-      axios.get(`https://unr-sd-a3-terca.onrender.com/livros`)
+      axios.get(`https://biblioapp-express-api.onrender.com/livros`)
         .then((response) => {
           this.books = response.data
         })
@@ -59,7 +59,7 @@ export default defineComponent({
         })
     },
     getAuthors() {
-      axios.get(`https://unr-sd-a3-terca.onrender.com/autores`)
+      axios.get(`https://biblioapp-express-api.onrender.com/autores`)
         .then((response) => {
           this.authors = response.data
         })

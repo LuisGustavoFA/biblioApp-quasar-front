@@ -111,7 +111,7 @@ export default {
       if (this.phoneField == '') {
         Notify.create("Campo de edição precisa ter algo escrito!")
       } else {
-        axios.patch(`https://unr-sd-a3-terca.onrender.com/clientes/${this.client.ID}`, {
+        axios.patch(`https://biblioapp-express-api.onrender.com/clientes/${this.client.ID}`, {
           field: 'CELL_PHONE',
           value: this.phoneField
         }, {
@@ -132,7 +132,7 @@ export default {
       if (this.addressField == '') {
         Notify.create("Campo de edição precisa ter algo escrito!")
       } else {
-        axios.patch(`https://unr-sd-a3-terca.onrender.com/clientes/${this.client.ID}`, {
+        axios.patch(`https://biblioapp-express-api.onrender.com/clientes/${this.client.ID}`, {
           field: 'ADDRESS',
           value: this.addressField
         }, {
@@ -153,7 +153,7 @@ export default {
       if (this.genderField == '') {
         Notify.create("Campo de edição precisa ter algo selecionado!")
       } else {
-        axios.patch(`https://unr-sd-a3-terca.onrender.com/clientes/${this.client.ID}`, {
+        axios.patch(`https://biblioapp-express-api.onrender.com/clientes/${this.client.ID}`, {
           field: 'GENDER',
           value: this.genderField == 'Masculino' ? 'M' : this.genderField == 'Feminino' ? 'F' : this.genderField == 'Outro' ? 'O' : this.genderField
         }, {

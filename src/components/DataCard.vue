@@ -58,7 +58,7 @@ import { Notify } from 'quasar';
       getData() {
         this.loading = true;
       if (userStore.jwt) {
-        axios.get(`https://unr-sd-a3-terca.onrender.com/${this.id}`, {
+        axios.get(`https://biblioapp-express-api.onrender.com/${this.id}`, {
           headers: {
             Authorization: `Bearer ${userStore.jwt}`
           }
